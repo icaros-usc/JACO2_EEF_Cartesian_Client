@@ -1,0 +1,34 @@
+vla_client:
+  ros__parameters:
+    server_url: http://127.0.0.1:8010/infer
+    dry_run: true
+    contract_verified: false
+    # The old client actually produced 10 state values. Confirm with training.
+    proprio_layout: legacy_openpi_10
+    translation_frame: base
+    rotation_frame: tool
+    finger_open: [0.0, 0.0]
+    finger_closed: [1.4, 1.4]
+    # Configure these for the actual workcell before enabling motion.
+    workspace_min: [-0.8, -0.8, 0.05]
+    workspace_max: [0.8, 0.8, 1.2]
+    queue_capacity: 8
+    refill_threshold: 4
+    max_chunk: 50
+    action_ttl_s: 8.0
+    server_timeout_s: 3.0
+    sensor_timeout_s: 0.5
+    max_sensor_skew_s: 0.15
+    minimum_duration_s: 0.5
+    max_motion_duration_s: 6.0
+    arm_velocity_rad_s: 0.25
+    arm_acceleration_rad_s2: 0.4
+    finger_velocity_rad_s: 0.5
+    finger_acceleration_rad_s2: 0.8
+    max_joint_step_rad: 0.35
+    max_translation_m: 0.03
+    max_rotation_rad: 0.15
+    require_force_sensor: true
+    max_force_n: 4.0
+    max_torque_nm: 1.0
+    publish_debug_images: false

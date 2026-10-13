@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package format="3">
+  <name>ada_calibrate_camera</name>
+  <version>0.0.0</version>
+  <description>ADA runtime camera extrinsics publisher</description>
+  <maintainer email="amaln@cs.washington.edu">Amal Nanavati</maintainer>
+  <license>BSD-3-Clause</license>
+  <buildtool_depend>python3-setuptools</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>python3-scipy</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>launch_xml</exec_depend>
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

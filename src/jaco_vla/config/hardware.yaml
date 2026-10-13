@@ -1,0 +1,5 @@
+# Default profile for the existing, unchanged physical rig.
+# Device serials and calibration vectors belong to the hardware, not this PC.
+overview_serial: '147322072337'
+wrist_serial: '845112070736'
+imu_serial_port: /dev/ttyUSB0
