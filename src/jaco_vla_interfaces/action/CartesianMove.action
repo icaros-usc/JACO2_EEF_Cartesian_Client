@@ -1,0 +1,15 @@
+# Absolute policy end-effector pose in the SDK base frame: j2n6s200_link_base.
+# Converted into speed-limited Cartesian velocity for action_duration_s.
+geometry_msgs/PoseStamped target
+# Two finger positions in radians, using the existing ADA finger calibration.
+# Persist after the arm interval until replaced or control is stopped.
+float64[2] finger_positions
+# Fault timeout; must exceed the driver action_duration_s.
+float64 timeout_s
+---
+# Success means the execution interval ended, not that the target was reached.
+bool success
+string message
+---
+geometry_msgs/PoseStamped current_pose
+float64[2] finger_positions

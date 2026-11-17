@@ -2,6 +2,11 @@
 set -euo pipefail
 root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 source "$root/scripts/clean_env.bash"
+if [[ ! -x "$root/.venv/bin/python" ]]; then
+  echo 'Install dependencies first: ./scripts/install_dependencies.sh' >&2
+  exit 1
+fi
+export PATH="$root/.venv/bin:$PATH"
 if [[ ! -f "$root/install/local_setup.bash" ]]; then
   echo 'Workspace is not built. Run scripts/build.sh first.' >&2
   exit 1
@@ -17,5 +22,4 @@ if [[ -n ${KINOVA_SDK_ROOT:-} ]]; then
     fi
   done
 fi
-/usr/bin/python3 "$root/scripts/check_install.py"
 exec ros2 launch jaco_vla bringup.launch.py "$@"

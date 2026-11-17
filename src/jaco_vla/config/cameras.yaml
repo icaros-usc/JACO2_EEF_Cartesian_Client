@@ -1,0 +1,29 @@
+# Set each camera's serial number; keep the underscore prefix and quotes.
+# Match capture settings to your lighting and the policy's training conditions.
+overview:
+  serial_no: '_147322072337'
+  # Disable unused infrared and IMU streams.
+  enable_infra1: false
+  enable_infra2: false
+  enable_gyro: false
+  enable_accel: false
+  rgb_camera.color_profile: 640x480x30
+  rgb_camera.color_format: RGB8
+  rgb_camera.enable_auto_exposure: false
+  rgb_camera.exposure: 166
+  rgb_camera.gain: 32
+  rgb_camera.enable_auto_white_balance: true
+
+wrist:
+  serial_no: '_845112070736'
+  # Disable unused infrared and IMU streams.
+  enable_infra1: false
+  enable_infra2: false
+  enable_gyro: false
+  enable_accel: false
+  rgb_camera.color_profile: 640x480x30
+  rgb_camera.color_format: RGB8
+  rgb_camera.enable_auto_exposure: false
+  rgb_camera.exposure: 166
+  rgb_camera.gain: 32
+  rgb_camera.enable_auto_white_balance: true

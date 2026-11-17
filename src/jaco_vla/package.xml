@@ -2,47 +2,35 @@
 <package format="3">
   <name>jaco_vla</name>
   <version>0.1.0</version>
-  <description>Asynchronous VLA inference and checked Jaco trajectory execution</description>
+  <description>Asynchronous VLA inference and native Gen2 Cartesian execution</description>
   <maintainer email="maintainers@example.invalid">Jaco VLA maintainers</maintainer>
   <license>BSD-3-Clause</license>
-  <buildtool_depend>python3-setuptools</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+  <depend>rcl_interfaces</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>tf2</depend>
+  <depend>jaco_vla_interfaces</depend>
   <exec_depend>rclpy</exec_depend>
-  <exec_depend>rcl_interfaces</exec_depend>
-  <exec_depend>sensor_msgs</exec_depend>
-  <exec_depend>geometry_msgs</exec_depend>
-  <exec_depend>std_msgs</exec_depend>
-  <exec_depend>std_srvs</exec_depend>
-  <exec_depend>control_msgs</exec_depend>
   <exec_depend>action_msgs</exec_depend>
-  <exec_depend>trajectory_msgs</exec_depend>
-  <exec_depend>moveit_msgs</exec_depend>
-  <exec_depend>tf2_ros</exec_depend>
   <exec_depend>launch_ros</exec_depend>
   <exec_depend>ament_index_python</exec_depend>
-  <exec_depend>moveit_configs_utils</exec_depend>
-  <exec_depend>robot_state_publisher</exec_depend>
-  <exec_depend>controller_manager</exec_depend>
-  <exec_depend>joint_trajectory_controller</exec_depend>
-  <exec_depend>joint_state_broadcaster</exec_depend>
-  <exec_depend>moveit_ros_move_group</exec_depend>
-  <exec_depend>ada_moveit</exec_depend>
-  <exec_depend>ada_imu</exec_depend>
-  <exec_depend>ada_calibrate_camera</exec_depend>
   <exec_depend>realsense2_camera</exec_depend>
   <exec_depend>image_tools</exec_depend>
   <exec_depend>python3-numpy</exec_depend>
-  <exec_depend>python3-requests</exec_depend>
+  <exec_depend>python3-scipy</exec_depend>
+  <!-- Python transport, controller and recording packages are installed in .venv. -->
+  <exec_depend>python3-venv</exec_depend>
+  <exec_depend>python3-pip</exec_depend>
   <exec_depend>python3-pil</exec_depend>
   <exec_depend>python3-yaml</exec_depend>
-  <test_depend>python3-pytest</test_depend>
+  <exec_depend>libusb-1.0</exec_depend>
   <export>
-    <build_type>ament_python</build_type>
+    <build_type>ament_cmake</build_type>
   </export>
-  <exec_depend>ada_hardware</exec_depend>
-  <exec_depend>ada_description</exec_depend>
-  <exec_depend>moveit_kinematics</exec_depend>
-  <exec_depend>moveit_planners_ompl</exec_depend>
-  <exec_depend>launch_xml</exec_depend>
-  <exec_depend>controller_manager_msgs</exec_depend>
-  <exec_depend>rviz2</exec_depend>
 </package>

@@ -1,0 +1,15 @@
+Original ADA source packages were adapted from personalrobotics/ada_ros2,
+Personal Robotics Laboratory, BSD-3-Clause. Their original copyright notices,
+licenses and robot assets are preserved in the local development archive.
+Source: https://github.com/personalrobotics/ada_ros2
+Snapshot: 563d6e0e460f081ecad4e6bbfd32f937c7998d30 (October 12, 2026).
+The distributed runtime consists of jaco_vla and jaco_vla_interfaces, including
+a new Cartesian endpoint using the Kinova SDK. Robot description, IMU,
+camera-extrinsics, MoveIt and ros2_control packages are archived locally under
+the Git-ignored .dev/ directory and are not part of the distributed runtime.
+
+Camera serials, calibration, frame/joint names, protocol keys and the legacy
+10D state mapping are from the supplied notes and inspected setup.
+The new VLA client is separate from the upstream client.
+ROS and the separately installed Kinova SDK retain their own licenses.
+LeRobot was used as a conceptual reference only; no LeRobot code is bundled.

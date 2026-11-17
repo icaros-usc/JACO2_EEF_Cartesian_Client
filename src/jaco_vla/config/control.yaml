@@ -1,0 +1,25 @@
+vla_client:
+  ros__parameters:
+    server_url: ws://127.0.0.1:8010  # OpenPI policy server through the SSH tunnel.
+    base_position_world: [0.0, 0.45, 0.91]  # Set the robot base origin in policy world.
+    base_quaternion_world: [0.0, 0.0, 0.0, 1.0]  # Set base orientation in policy world (xyzw).
+    action_translation_scale: 0.05  # Convert policy translation deltas to metres.
+    action_rotation_scale: 0.5  # Convert policy rotation vectors to radians.
+    finger_open: [0.6, 0.6]  # Finger positions [left,right] representing an open gripper.
+    finger_closed: [1.4, 1.4]  # Finger positions [left,right] representing a closed gripper.
+    replan_steps: 10  # Actions executed per prediction; cannot exceed the returned chunk length.
+    overview_warmup_s: 5.0  # Discard initial overview frames while camera colors stabilize.
+    wrist_warmup_s: 5.0  # Discard initial wrist frames while camera colors stabilize.
+    server_timeout_s: 30.0  # Allow policy inference, including initial model warm-up.
+    sensor_timeout_s: 0.5  # Stop if images, pose or joint feedback stop arriving.
+    motion_timeout_s: 6.0  # Fault timeout for a driver response; must exceed action_duration_s.
+jaco_cartesian:
+  ros__parameters:
+    kinova_frame_type: rotating  # Required SDK mode; checked at startup (fixed or rotating).
+    # Identity uses the SDK TCP directly; quaternions are [x,y,z,w].
+    tool_translation: [0.0, 0.0, 0.0]  # Policy tool-point offset from the SDK TCP.
+    tool_rotation: [0.0, 0.0, 0.0, 1.0]  # Policy tool orientation offset from SDK TCP.
+    translation_speed_m_s: 0.06  # Speed limit for Cartesian translation.
+    rotation_speed_rad_s: 0.3  # Speed limit for orientation changes.
+    action_duration_s: 0.05  # Execute each arm motion for this interval.
+    command_watchdog_s: 0.5  # Stop control if client heartbeats cease.
